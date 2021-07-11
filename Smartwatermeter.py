@@ -165,8 +165,8 @@ def parse_command_line_args():
             help=('Expiration time, in minutes, for JWT tokens.'))f
     parser.add_argument(
             '--json_data_file',
-            default='waterdata.json',
-            help='water JSON file to stream the data from.')
+            default='data/SampleData.json',
+            help='Sample JSON file to stream the data from.')
     return parser.parse_args()
 
 
@@ -188,7 +188,7 @@ def main():
         args.private_key_file, args.algorithm, args.ca_certs,
         args.mqtt_bridge_hostname, args.mqtt_bridge_port)
 
-    #data_file = "waterdata.json"
+    #data_file = "data/SampleData.json"
     data_file = args.json_data_file
     fr = open(data_file, 'r')
     i = 1
