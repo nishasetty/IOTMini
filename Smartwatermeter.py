@@ -190,7 +190,7 @@ def main():
 
     #data_file = "waterdata.json"
     data_file = args.json_data_file
-    fr = open(data_file, 'w')
+    fr = open(data_file, 'r')
     i = 1
     for line in fr:
         data = json.loads(line)
