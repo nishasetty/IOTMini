@@ -188,7 +188,7 @@ def main():
         args.private_key_file, args.algorithm, args.ca_certs,
         args.mqtt_bridge_hostname, args.mqtt_bridge_port)
 
-    #data_file = "waterdata.json"
+    data_file = "waterdata.json"
     data_file = args.json_data_file
     fr = open(data_file, 'r')
     i = 1
