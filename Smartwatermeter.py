@@ -162,7 +162,7 @@ def parse_command_line_args():
             '--jwt_expires_minutes',
             default=20,
             type=int,
-            help=('Expiration time, in minutes, for JWT tokens.'))f
+            help=('Expiration time, in minutes, for JWT tokens.'))
     parser.add_argument(
             '--json_data_file',
             default='waterdata.json',
