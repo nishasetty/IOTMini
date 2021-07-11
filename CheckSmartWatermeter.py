@@ -195,7 +195,7 @@ def main():
                         calcs = calcs(firstSampleTime, lastSampleTime)
                         currentTime = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
 			uniqueID = str(uuid.uuid4()) + "-" + sensorID
-                        payload = createJSON(sensorID, uniqueID, currentTime, bpm)
+                        payload = createJSON(sensorID, uniqueID, dateTime, waterConsumed)
                         client.publish(_MQTT_TOPIC, payload, qos=1)
                         print("{}\n".format(payload))
                         time.sleep(0.5)
