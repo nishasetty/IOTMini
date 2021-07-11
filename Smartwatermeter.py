@@ -166,7 +166,7 @@ def parse_command_line_args():
     parser.add_argument(
             '--json_data_file',
             default='waterdata.json',
-            help='Sample JSON file to stream the data from.')
+            help='water JSON file to stream the data from.')
     return parser.parse_args()
 
 
