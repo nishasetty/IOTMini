@@ -198,6 +198,14 @@ def main():
         # delivery. Cloud IoT Core also supports qos=0 for at most once
         # delivery.
         payload = json.dumps(data)    # JSON object to string conversion
+        
+        dict1 = {}
+        dict2 = {}
+        json.dumps([dict1, dict2])
+        '[{}, {}]'
+        payload = json.loads(json.dumps([dict1, dict2]))
+        [{}, {}]
+        
         print('Publishing message #{}: \'{}\''.format(i, payload))
         client.publish(mqtt_topic, payload, qos=1)
         i += 1
